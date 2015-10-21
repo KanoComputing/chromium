@@ -1,0 +1,12 @@
+Source: chromium
+Maintainer: Team Kano <dev@kano.me>
+Section: web
+Priority: optional
+Standards-Version: 3.9.4
+Build-Depends: debhelper (>=9.0.0)
+
+Package: chromium
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, chromium-browser
+Description: An empty package that satisfies the dependency on chromium.
+

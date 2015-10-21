@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# postrm
+#
+# Copyright (C) 2015 Kano Computing Ltd.
+# License: http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
+#
+
+case "$1" in
+    remove|upgrade)
+        # Remove the chromium symlink if needed
+        if [[ -L "/usr/bin/chromium" ]]; then
+            rm -f /usr/bin/chromium
+        fi
+
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0
